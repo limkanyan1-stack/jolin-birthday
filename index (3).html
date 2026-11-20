@@ -282,8 +282,14 @@
       dialog.appendChild(star);setTimeout(()=>star.remove(),1600);
     }
     confetti();
-    giftTimer=setTimeout(()=>{if(giftOpened&&!giftOverlay.classList.contains('hidden')){giftBox.classList.add('hidden');giftCard.classList.remove('hidden');giftHint.textContent='JOLIN · LIMITED BIRTHDAY PHOTOCARD 💜';}},950);
-    status.textContent='SURPRISE UNLOCKED // YOU DESERVE ALL THE HAPPINESS 💜';
+   
+giftBox.classList.add('hidden');
+giftCard.classList.remove('hidden');
+giftCard.style.display = 'block';
+giftCard.style.opacity = '1';
+giftCard.style.visibility = 'visible';
+giftHint.textContent = 'JOLIN · LIMITED BIRTHDAY PHOTOCARD 💜';
+
   }
   giftBox.addEventListener('click',openGiftBox);
   giftClose.addEventListener('click',closeGift);
